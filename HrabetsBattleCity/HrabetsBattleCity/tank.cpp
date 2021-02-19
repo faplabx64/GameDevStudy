@@ -43,6 +43,7 @@ void Tank::move(Direction direction)
 
 void Tank::fire()
 {
+
 	if (m_fireCooldownTime > 0)
 		return;
 

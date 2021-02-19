@@ -8,4 +8,6 @@
 Wall::Wall()
 {
 	m_type = GameObjectType_Wall;
+
+	m_health = 4;
 }

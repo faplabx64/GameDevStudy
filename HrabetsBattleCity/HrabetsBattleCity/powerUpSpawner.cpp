@@ -10,7 +10,7 @@ PowerUpSpawner::PowerUpSpawner()
 {
 	m_type       = GameObjectType_PowerUpSpawner;
 
-	m_spawnTimer = GetRandomInt(2, kBuffCount);
+	m_spawnRandom = GetRandomInt(2, kBuffCount);
 
 	m_physical   = false;
 }
@@ -24,9 +24,10 @@ void PowerUpSpawner::update(float dt)
 	int allBuffsOnLevel = heartBuffsOnLevel + 0;
 	int countDeadEnemies =  m_game->getDiedEnemiesCount();
 	
-	if(m_spawnTimer = 1  && allBuffsOnLevel < 1)
-	m_game->createObject(GameObjectType_BuffTank, getX(), getY());
-
+	//Fix later
+	/*if(m_spawnRandom == 2  && allBuffsOnLevel < 1 && countDeadEnemies == 4)
+	m_game -> createObject(GameObjectType_BuffTank, getX(), getY());
+	*/
 
 
 }

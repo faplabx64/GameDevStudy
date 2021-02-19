@@ -16,6 +16,6 @@ public:
 	virtual void update(float dt);
 
 protected :
-	int m_spawnTimer;
+	int m_spawnRandom;
 
 };

@@ -85,7 +85,7 @@ bool MyFramework::Init()
 			case CellSymbol_Base:
 			{
 				m_base = createObject(GameObjectType_Base, c, r);
-				m_base->setTextureRect(kBaseImage);
+				m_base -> setTextureRect(kBaseImage);
 				break;
 			}
 
@@ -99,6 +99,12 @@ bool MyFramework::Init()
 			case CellSymbol_EnemySpawner:
 			{
 				createObject(GameObjectType_EnemySpawner, c, r);
+				break;
+			}
+
+			case CellSymbol_PowerUpSpawner:
+			{
+				createObject(GameObjectType_PowerUpSpawner, c, r);
 				break;
 			}
 			}
@@ -179,6 +185,10 @@ void MyFramework::onKeyPressed(FRKey k)
 
 void MyFramework::onKeyReleased(FRKey k)
 {
+	if (!m_player1)
+		return;
+
+
 	switch (k)
 	{
 	case FRKey::RIGHT:
@@ -278,10 +288,17 @@ bool MyFramework::moveObjectTo(GameObject* object, float x, float y)
 	bool canMoveToCell = false;
 
 	GameObject* otherObject = checkIntersects(x, y, object->getWidth(), object->getHeight(), object);
-
-	if (otherObject)
+	//Fix later
+	 /*GameObjectType  obj = object->getType();
+	 if (obj == GameObjectType_BuffTank)
+	 {
+		 object.m_health = 0;
+		 canMoveToCell = true;
+	 }
+	 */
+	 if (otherObject)
 		object->intersect(otherObject);
-	else
+	 else
 		canMoveToCell = true;
 
 
