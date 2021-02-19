@@ -48,6 +48,12 @@
     <ClCompile Include="tank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="buffTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="powerUpSpawner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameObjectType.h">
@@ -90,6 +96,12 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="tank.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buffTank.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="powerUpSpawner.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

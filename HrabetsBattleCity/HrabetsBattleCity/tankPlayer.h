@@ -15,4 +15,8 @@ public:
 	TankPlayer();
 
 	void render();
+	void update(float dt);
+protected:
+	int m_heart;
+
 };

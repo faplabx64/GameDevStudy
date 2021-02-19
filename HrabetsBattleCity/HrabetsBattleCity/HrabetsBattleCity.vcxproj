@@ -146,7 +146,9 @@
     <ClCompile Include="enemySpawner.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gameObject.cpp" />
+    <ClCompile Include="buffTank.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="powerUpSpawner.cpp" />
     <ClCompile Include="tank.cpp" />
     <ClCompile Include="tankEnemy.cpp" />
     <ClCompile Include="tankPlayer.cpp" />
@@ -161,7 +163,9 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="gameObjectType.h" />
+    <ClInclude Include="buffTank.h" />
     <ClInclude Include="level.h" />
+    <ClInclude Include="powerUpSpawner.h" />
     <ClInclude Include="rect.h" />
     <ClInclude Include="tank.h" />
     <ClInclude Include="tankEnemy.h" />

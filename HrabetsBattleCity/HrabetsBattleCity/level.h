@@ -27,6 +27,8 @@ const unsigned char	CellSymbol_BrickWall = '#';
 const unsigned char	CellSymbol_SteelWall = '@';
 const unsigned char	CellSymbol_Base = 'B';
 const unsigned char	CellSymbol_EnemySpawner = 'S';
+const unsigned char	CellSymbol_PowerUpSpawner = 'P';
+const unsigned char	CellSymbol_BuffTank = 'Q';
 
 const unsigned char kLevelData0[kLevelRows][kLevelColumns + 1] =
 {
@@ -55,7 +57,7 @@ const unsigned char kLevelData0[kLevelRows][kLevelColumns + 1] =
 	"@                                                @",
 	"@                                                @",
 	"@                                                @",
-	"@                                                @",
+	"@    P                                     P     @",
 	"@                                                @",
 	"@                                                @",
 	"@                                                @",
@@ -83,15 +85,16 @@ const Rect kTankImage = Rect({ 0, 0, kPixelsPerCell, kPixelsPerCell });
 
 /////////////////////////////////////
 // Player data
-const int kPlayerHealth = 16;
+const int kPlayerHealth = 1;
 const int kPlayerSpeed = 10;
+const int kHeart = 2;
 
 
 /////////////////////////////////////
 // Enemy data
 const int kEnemiesPerLevel = 24;
 const int kEnemiesPerLevelInOneMoment = 6;
-const int kEnemyHealth = 5;
+const int kEnemyHealth = 1;
 const int kEnemySpeed = 5;
 const float kEnemySpawnerSpawnTime = 10.0;
 const float kEnemyAIAnalizeTime = 0.5;
@@ -99,13 +102,18 @@ const float kEnemyAIAnalizeTime = 0.5;
 
 /////////////////////////////////////
 // Base data
-const int kBaseColumns = 8;
-const int kBaseRows = 2;
-const int kBaseHealth = 3;
+const int  kBaseColumns = 8;
+const int  kBaseRows = 2;
+const int  kBaseHealth = 3;
 const Rect kBaseImage = Rect({ kPixelsPerCell * 19, 2 * kPixelsPerCell, kBaseColumns * kPixelsPerCell, kBaseRows * kPixelsPerCell });
 
 
 /////////////////////////////////////
 // Bullet data
 const float kBulletSpeed = 30.0;
-const Rect kBulletImage = Rect({ kPixelsPerCell * kPixelsPerCell, 6 * kPixelsPerCell, kPixelsPerCell, kPixelsPerCell });
+const Rect  kBulletImage = Rect({ kPixelsPerCell * kPixelsPerCell, 6 * kPixelsPerCell, kPixelsPerCell, kPixelsPerCell });
+
+////////////////////////////////////
+// Power-UpSpawner data
+const Rect kBuffTank = Rect({ 22, 8, kPixelsPerCell, kPixelsPerCell });
+const int  kBuffCount = 2;

@@ -13,4 +13,7 @@ enum GameObjectType
 	GameObjectType_Base,
 	GameObjectType_Bullet,
 	GameObjectType_EnemySpawner,
+	GameObjectType_PowerUpSpawner,
+	GameObjectType_BuffTank,
+
 };

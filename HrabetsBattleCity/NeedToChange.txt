@@ -5,15 +5,15 @@ Bugs.
 // | In progress
 \\ | Skip
 
-1)  Basic tank don't can be destroyed by one enemy bullet // 
+1)  Basic tank don't can be destroyed by one enemy bullet ++ 
 
 2)  Base is displayed crooked   --
 
-3)  Need to add 2 hp for player //
+3)  Need to add 2 hp for player ++
 
 4)  Add Power-Up  - extra life --
 
-5)  Brick walls broken if it take 1 bullet shot(Need 4) --
+5)  Brick walls broken if it take 1 bullet shot(Need 4) //
 
 6)  Create a difference version of tanks. (Optional but it sounds good) --
 
@@ -23,5 +23,5 @@ Bugs.
 
 9)  Add full screen mode open by pressing a button (Very optional) \\
 
-10) Solve the problem with breakage after killing a player //
+10) Solve the problem with breakage after killing a player ++
 

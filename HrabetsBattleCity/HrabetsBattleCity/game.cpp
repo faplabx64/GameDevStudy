@@ -11,6 +11,8 @@
 #include "tankPlayer.h"
 #include "tankEnemy.h"
 #include "enemySpawner.h"
+#include "powerUpSpawner.h"
+#include "buffTank.h"
 #include <ctime>
 #include "Framework.h"
 
@@ -18,6 +20,7 @@
 /////////////////////////////////////
 // Global
 Sprite* g_atlas00 = nullptr;
+bool isHelmeActive = false;
 
 
 /////////////////////////////////////
@@ -176,9 +179,6 @@ void MyFramework::onKeyPressed(FRKey k)
 
 void MyFramework::onKeyReleased(FRKey k)
 {
-	if (!m_player1)
-		return;
-
 	switch (k)
 	{
 	case FRKey::RIGHT:
@@ -321,12 +321,14 @@ GameObject* MyFramework::createObject(GameObjectType type, float x, float y)
 
 			switch (type)
 			{
-			case GameObjectType_Wall:			object = new Wall();			break;
-			case GameObjectType_Base:			object = new Base();			break;
-			case GameObjectType_Bullet:			object = new Bullet();			break;
-			case GameObjectType_TankPlayer:		object = new TankPlayer();		break;
-			case GameObjectType_TankEnemy:		object = new TankEnemy();		break;
-			case GameObjectType_EnemySpawner:	object = new EnemySpawner();	break;
+			case GameObjectType_Wall:			       object = new Wall();			break;
+			case GameObjectType_Base:			       object = new Base();			break;
+			case GameObjectType_Bullet:			     object = new Bullet();			break;
+			case GameObjectType_TankPlayer:		   object = new TankPlayer();		break;
+			case GameObjectType_TankEnemy:		   object = new TankEnemy();		break;
+			case GameObjectType_EnemySpawner:	   object = new EnemySpawner();	break;
+			case GameObjectType_PowerUpSpawner:  object = new PowerUpSpawner(); break;
+			case GameObjectType_BuffTank:        object = new BuffTank(); break;
 			}
 
 			if (object == 0)
