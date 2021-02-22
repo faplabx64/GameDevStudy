@@ -1,0 +1,13 @@
+/////////////////////////////////////
+// Include
+#include "wall.h"
+
+
+/////////////////////////////////////
+// Class Wall
+Wall::Wall()
+{
+	m_type = GameObjectType_Wall;
+
+	m_health = 4;
+}
